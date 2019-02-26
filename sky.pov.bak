@@ -1,0 +1,27 @@
+// sky ---------------------------
+plane{<0,1,0>,1 hollow
+       texture{
+        pigment{ bozo turbulence 0.92
+          color_map {
+           [0.00 rgb <0.2, 0.3, 1>*0.5]
+           [0.50 rgb <0.2, 0.3, 1>*0.8]
+           [0.70 rgb <1,1,1>]
+           [0.85 rgb <0.25,0.25,0.25>]
+           [1.0 rgb <0.5,0.5,0.5>]}
+          scale<1,1,1.5>*2.5
+          translate<1.0,0,-1>
+          }// end of pigment
+        finish {ambient 1 diffuse 0}
+        }// end of texture
+        scale 10000
+     }// end of plane
+
+// fog on the ground -------------
+fog { fog_type   2
+      distance   50
+      color      White
+      fog_offset 0.1
+      fog_alt    1.5
+      turbulence 1.8
+    }
+//--------------------------------
